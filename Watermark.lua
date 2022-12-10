@@ -52,7 +52,7 @@ local Watermark = {
 }
 
 local Loop = game:GetService("RunService").RenderStepped:Connect(function(step)
-    Watermark.Text.Text = string.formate("%s | v%s [%s] | FPS: %s | Ping: %sms", getgenv().Name, getgenv().Version, getgenv().Build, math.floor(1/step), math.floor(game:GetService('Stats').Network.ServerStatsItem["Data Ping"]:GetValue()))
+    Watermark.Text.Text = string.format("%s | v%s [%s] | FPS: %s | Ping: %sms", getgenv().Name, getgenv().Version, getgenv().Build, math.floor(1/step), math.floor(game:GetService('Stats').Network.ServerStatsItem["Data Ping"]:GetValue()))
 
     Watermark.Border.Position = V2(10, 10)
     Watermark.Accent.Position = Watermark.Border.Position + V2(1, 1)
